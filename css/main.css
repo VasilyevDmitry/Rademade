@@ -267,6 +267,7 @@
 }
 .main .header .header-section__user .img-user-call {
   width: 19%;
+  padding-left: 15px;
 }
 .main .header .header-section__user .name-user-call {
   font-size: 16px;
