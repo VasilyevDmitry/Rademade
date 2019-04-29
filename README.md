@@ -1,6 +1,6 @@
 # Run the project:
 
-> git clone https://github.com/VasilyevDmitry/Rademade.git ;
+> git clone https://vasilyevdmitry.github.io/Rademade/;
 > cd GithubUsers ;
 > npm install ;
 > npm start ;
