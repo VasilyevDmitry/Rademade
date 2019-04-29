@@ -27,6 +27,7 @@
   display: -ms-flexbox;
   display: flex;
   max-width: 1415px;
+  width:90%;
 }
 .aside {
   background: #303841;
