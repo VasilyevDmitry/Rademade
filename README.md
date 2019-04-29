@@ -1,6 +1,6 @@
 # Run the project:
 
 > git clone https://vasilyevdmitry.github.io/Rademade/;
-> cd GithubUsers ;
+> cd Rademade ;
 > npm install ;
-> npm start ;
+> npm gulp ;
