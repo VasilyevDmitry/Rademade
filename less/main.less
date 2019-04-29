@@ -1,0 +1,352 @@
+@import "font";
+* {
+  margin: 0;
+  padding: 0;
+}
+.crm-interface {
+  display: flex;
+  max-width: 1415px;
+}
+.aside {
+  background: rgb(48, 56, 65);
+  color: rgb(186, 189, 192);
+  width: 22.5%;
+  font-family: "MyriadPro", Arial;
+  &__text {
+    letter-spacing: 1px;
+    color: rgb(255, 193, 45);
+    font-size: 28px;
+    font-weight: inherit;
+    margin: 40px 0 50px 25px;
+  }
+  &__menu li {
+    cursor: pointer;
+    padding-left: 68px;
+    font-size: 18px;
+    border-bottom: 1px solid rgb(58, 65, 74);
+  }
+  &__menu {
+    margin-bottom: 20px;
+    &_dashboard {
+      list-style: none;
+      position: relative;
+      padding-bottom: 19px;
+      padding-top: 12px;
+      &:after{
+        position: absolute;
+        content: " ";
+        top:13px;
+        left: 25px;
+        background: url("../images/imgDashboard.png") no-repeat;
+        background-size: cover;
+        width: 23px;
+        height: 18px;
+      }
+    }
+    &_reports {
+      list-style: none;
+      padding-top: 19px;
+      padding-bottom: 12px;
+      position: relative;
+      &:after {
+        position: absolute;
+        content: " ";
+        top:17px;
+        left: 26px;
+        background: url("../images/imgReport.png") no-repeat;
+        background-size: cover  ;
+        width: 22px;
+        height: 21px;
+      }
+    }
+    &_customers {
+      list-style: none;
+      padding-top: 25px;
+      padding-bottom: 18px;
+      position: relative;
+      letter-spacing: 0.5px;
+      &:after{
+        position: absolute;
+        content: " ";
+        top: 23px;
+        left: 26px;
+        background: url("../images/imgCustomers.png") no-repeat;
+        background-size: cover  ;
+        width: 24px;
+        height: 19px;
+      }
+    }
+    &_calendar {
+      list-style: none;
+      padding-top: 18px;
+      padding-bottom: 10px;
+      position: relative;
+      letter-spacing: 0.4px;
+      &:after {
+        position: absolute;
+        content: " ";
+        top:17px;
+        left: 27px;
+        background: url("../images/imgCalendar.png") no-repeat;
+        background-size: cover  ;
+        width: 21px;
+        height: 22px;
+      }
+    }
+  }
+  .aside__menu_changeColor {
+    background: rgb(68, 42, 157);
+    &:before{
+      position: absolute;
+      content: " ";
+      top: 0;
+      left: 0;
+      border-left: 5px solid rgb(255, 193, 45);
+      width: 16%;
+      height: 100%;
+    }
+  }
+}
+.main {
+  width: 77.5%;
+  font-family: "OpenSansBold", Arial;
+  font-weight: 600;
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 30px 14px 24px;
+    border-bottom: 1.5px solid rgb(237, 237, 237);
+    .nav {
+      display: flex;
+      align-items: center;
+      width: 40%;
+      padding-top: 4px;
+      &__img-arrow {
+        width: 10px;
+        height: 14px;
+        padding: 0 18px 0 25px;
+      }
+      &__customer {
+        padding-left: 12px;
+        font-size: 16px;
+        font-weight: 600;
+        margin-top: -2px;
+        color: rgb(58, 65, 74);
+      }
+      &__name-customer{
+        font-size: 16px;
+        color: rgb(68, 42, 157);
+        font-weight: 600;
+      }
+    }
+    .header-section {
+      display: flex;
+      width: 60%;
+      justify-content: flex-end;
+      align-items: center;
+      &__form {
+        background: rgb(255, 255, 255);
+        display: flex;
+        align-items: center;
+        margin-right: 42px;
+        width: 45%;
+        border-radius: 4px;
+        border: 1px solid rgb(237, 237, 237);
+        .form-input {
+          outline:none;
+          font-size: 12px;
+          width: 83%;
+          height: 35px;
+          padding-left: 15px;
+          border: none;
+          background: rgb(255, 255, 255);;
+          color: rgb(10, 7, 27);
+        }
+        .img-search {
+          padding-top: 10px;
+          margin: 0 18px 5px;
+        }
+      }
+    }
+    .header-section-btn__ring {
+      margin-right: 2px;
+      position: relative;
+      padding-top: 6px;
+      &::after {
+        position: absolute;
+        content: '4';
+        top: 2px;
+        right: -10px;
+        border-radius: 50%;
+        background: #f14e95;
+        color: rgb(255, 255, 255);
+        font-size: 11px;
+        width: 16px;
+        height: 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .btn-ring {
+        background:url("../images/imgRing.png") no-repeat;
+        background-size: cover;
+        width: 19px;
+        height: 20px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        &:active{
+          transform: scale(1.3);
+          transition: 0.2s;
+        }
+      }
+    }
+    .header-section__user {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      width: 32%;
+
+      .img-user-call {
+        width: 19%;
+      }
+      .name-user-call {
+        font-size: 16px;
+        padding: 0 7px 0 11px;
+        color: rgb(79, 79, 79);
+      }
+    }
+  }
+  .personal-data {
+    margin-top: 55px;
+    .personal-cabinet {
+      display: flex;
+      .avatar {
+        width: 12%;
+        margin-left: 34px;
+        padding-top: 5px;
+        &__photo {
+          width: 68%;
+        }
+      }
+      .data-customers {
+        width: 85%;
+        margin-left: -2px;
+        .name-position {
+          padding-bottom: 16px;
+          border-bottom: 1.5px solid rgb(237, 237, 237);
+          &__name {
+            color: rgb(79, 79, 79);
+            position: relative;
+            letter-spacing: 0.6px;
+          }
+          &__name:after {
+            position: absolute;
+            content: "GOLD";
+            top: 5px;
+            left: 131px;
+            font-size: 10px;
+            color: #ffffff;
+            background: #ffc12d;
+            border-radius: 3px;
+            padding: 0 8px 3px;
+            letter-spacing: 1px;
+          }
+          &__position {
+            color: rgb(153, 153, 153);
+            margin-top: 6px;
+            font-size: 15px;
+          }
+        }
+      }
+      .phone-address {
+        padding-top: 24px;
+        display: flex;
+        flex-direction: row;
+        padding-right: 36px;
+        .phone-address__phone {
+          width: 26%;
+        }
+        .phone-title,.address-title {
+          color: rgb(153, 153, 153);
+          font-size: 12.5px;
+          letter-spacing: 0.5px;
+          padding: 2px 0 0 2px;
+        }
+        .phone-num,.address-text {
+          color: rgb(68, 42, 157);
+          padding: 5px 0 0 2px;
+          font-size: 15px;
+        }
+        .phone-address__address {
+          width: 30%;
+          margin: 0 45px;
+        }
+        .btn-block {
+          width: 34%;
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          &__btn{
+            padding: 8px 28px;
+            background: rgb(48, 56, 65);
+            color: rgb(255, 193, 45);
+            border: none;
+            outline: none;
+            border-radius: 4px;
+            font-family: "SemiBold", Arial;
+            font-size: 14px;
+            cursor: pointer;
+            &:active {
+              transform: scale(0.9);
+              transition: 0.3s;
+            }
+          }
+        }
+      }
+    }
+    .personal-menu {
+      margin-top: 84px;
+      .header-menu{
+        list-style: none;
+        display: flex;
+        margin-left: 25px;
+        font-family: 'OpenSansBold', Arial;
+        &__overview,&__orders,&__payments{
+          margin: 0 13px;
+          padding: 1px 15px 30px 15px;
+          position: relative;
+          cursor: pointer;
+          font-size: 14px;
+          color: rgb(48, 56, 65);
+          font-weight: 900;
+
+        }
+        &__orders {
+          margin: 0 18px;
+          padding: 1px 8px 0 8px;
+        }
+        &__payments {
+          margin: 0 19px;
+          padding: 1px 15px 0 15px;
+        }
+        .header-menu__line_active:before {
+          position: absolute;
+          content: "";
+          bottom: 5px;
+          left: 0;
+          background: rgb(68, 42, 157);
+          width: 100%;
+          height: 6px;
+          border-radius: 20px;
+        }
+      }
+    }
+    .personal-menu__data {
+      margin-top: -5px;
+      height: 210px;
+      background: rgb(237, 237, 237);
+    }
+  }
+}
